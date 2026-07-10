@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ahmad Roshan</title>
+<meta name="description" content="Get in touch with Ahmad Roshan for freelance work, internships, or full-time front-end roles.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contact">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>Ahmad Roshan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="home"><span class="swatch"></span>Home</a></li>
+      <li><a href="skill.html" data-page="skill"><span class="swatch"></span>Skills</a></li>
+      <li><a href="project.html" data-page="project"><span class="swatch"></span>Projects</a></li>
+      <li><a href="resume.html" data-page="resume"><span class="swatch"></span>Resume</a></li>
+      <li><a href="contact.html" data-page="contact"><span class="swatch"></span>Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner" style="grid-template-columns:1fr;">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h1>Let's <span class="accent-underline">work together</span>.</h1>
+      <p class="lede">Whether it's a freelance project, an internship, or a full-time role — send a message and I'll get back to you.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap grid grid-2" style="align-items:start;">
+
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">Message</span>
+        <h2>Send me a note</h2>
+      </div>
+      <form class="form" id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required minlength="2" placeholder="Your full name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required minlength="10" placeholder="What would you like to discuss?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid btn-arrow">Send message</button>
+        <p class="form-note" id="form-status" role="status"></p>
+      </form>
+    </div>
+
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">Direct</span>
+        <h2>Other ways to reach me</h2>
+      </div>
+      <div class="contact-info">
+        <div class="card">
+          <span class="icon">@</span>
+          <div>
+            <h3 style="margin-bottom:0.2rem;">Email</h3>
+            <p style="margin:0;">ahmedroshan015@gmail.com</p>
+          </div>
+        </div>
+        <div class="card">
+          <span class="icon">#</span>
+          <div>
+            <h3 style="margin-bottom:0.2rem;">Phone</h3>
+            <p style="margin:0;">+91 8962924153</p>
+          </div>
+        </div>
+        <div class="card card-future">
+          <span class="icon">in</span>
+          <div>
+            <h3 style="margin-bottom:0.2rem;">LinkedIn</h3>
+            <p style="margin:1px;"><a href="https://www.linkedin.com/in/ahmad-roshan-5b6571352?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn </a></p>
+          </div>
+        </div>
+        <div class="card card-future">
+          <span class="icon">gh</span>
+          <div>
+            <h3 style="margin-bottom:0.2rem;">GitHub</h3>
+            <p style="margin:0;">Link coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>© 2026 Ahmad Roshan. Built with HTML, CSS &amp; JavaScript.</p>
+    <ul class="footer-links">
+      <li><a href="#">GitHub (soon)</a></li>
+        <li><a href="https://www.linkedin.com/in/ahmad-roshan-5b6571352?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn </a></li> 
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Basic client-side validation before submission (no backend yet)
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.checkValidity()) {
+        status.textContent = 'Thanks — this form isn\'t wired to a backend yet, so nothing was sent. Email me directly for now.';
+      } else {
+        status.textContent = 'Please fill in every field before sending.';
+        form.reportValidity();
+      }
+    });
+  }
+</script>
+</body>
+</html>
